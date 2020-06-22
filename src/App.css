@@ -6,17 +6,20 @@ body{
     width: 100%;
     display: inline-flex;
     justify-content: center;
+    text-align: center;
+    padding-top: 20px;
 }
 ul{
   list-style-type: none;
-  display: flex;
-  padding-top: 20px;
+
 }
 .navbar li{
   text-align: center;
+  display: flex;
+  padding-top: 20px;
 }
 
-li a:hover{
+.navbar a:hover{
   background-color: rgb(136, 46, 64);
   color: aqua;
 }
