@@ -1,47 +1,49 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body{
   background-color: #282c34;
   color: bisque;
 }
-.navbar{
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 20px;
+.nav-container{
+    width: 80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-ul{
-  list-style-type: none;
 
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
 }
+.navbar a{
+  text-decoration: none;
+  color: bisque;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .navbar li{
   text-align: center;
-  display: flex;
-  padding-top: 20px;
 }
 
 .navbar a:hover{
-  background-color: rgb(136, 46, 64);
   color: aqua;
 }
-a:link, a:visited {
-  border: 1px solid black transparent;
-  background-color: #61DBFB;
-  color: black;
-  padding: 14px 25px;
-  text-decoration: none;
-  box-shadow: 5px 10px 10px #888888;
-}
-
-
-.navbar img{
-  width: 100px;
-  height: 100px; 
-}
 .logo{
-  border: 0;
-  filter: invert(77%) sepia(11%) saturate(1968%) hue-rotate(154deg) brightness(96%) contrast(104%);
-
+  font-family: 'Cairo', sans-serif;
+  font-size: 20px;
+  letter-spacing: 5px;
 }
+
 .logo:hover{
-  filter: invert(18%) sepia(18%) saturate(7440%) hue-rotate(325deg) brightness(90%) contrast(80%);
+  color: aqua;
 }
