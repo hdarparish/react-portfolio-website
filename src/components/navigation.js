@@ -1,5 +1,5 @@
 import React from 'react';
- 
+
 import { NavLink } from 'react-router-dom';
 
 //import logo from '../assets/logo.svg';
@@ -22,14 +22,18 @@ class Navigation extends React.Component {
 }
 */
 
- 
+
 const Navigation = () => {
     return (
-       <div className="navbar">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-       </div>
+        <div className="nav-container">
+            <h1 className="logo">HDARPARISH</h1>
+            <div className="navbar">
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
+            </div>
+
+        </div>
     );
 }
 
