@@ -9,6 +9,20 @@ import Error from './components/Error';
 import Navigation from './components/Navigation';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: "" };
+  }
+
+  callAPI() {
+    fetch("http://localhost:5000/")
+      .then(res => res.text())
+      .then(res => this.setState({ apiResponse: res }));
+  }
+
+  componentWillMount() {
+    this.callAPI();
+  }
   render() {
     return (
       <BrowserRouter>
@@ -20,6 +34,7 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
             <Route component={Error} />
           </Switch>
+          <p className="App-intro">;{this.state.apiResponse}</p>
         </div>
       </BrowserRouter>
     );
