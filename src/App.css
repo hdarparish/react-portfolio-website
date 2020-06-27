@@ -5,7 +5,9 @@
 }
 
 body{
-  background-color: #282c34;
+  /*background-color: #282c34;*/
+  height: 100vh;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   color: bisque;
 }
 .nav-container{
@@ -35,15 +37,36 @@ body{
   text-align: center;
 }
 
-.navbar a:hover{
+a:hover{
   color: aqua;
 }
 .logo{
   font-family: 'Cairo', sans-serif;
   font-size: 20px;
   letter-spacing: 5px;
+  text-decoration: none;
+}
+.logo a {
+  text-decoration: none;
+  color: bisque;
+}
+
+.logo:visited, .logo:link {
+  text-decoration: none;
+  color: bisque;
 }
 
 .logo:hover{
   color: aqua;
+}
+h1{
+  margin-bottom: 10px;
+}
+
+.input-style{
+  color: bisque !important;
+  width: 80% !important;
+}
+
+.center{
 }
