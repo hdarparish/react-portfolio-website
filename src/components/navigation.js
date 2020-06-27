@@ -8,10 +8,10 @@ import { NavLink } from 'react-router-dom';
 const Navigation = () => {
     return (
         <div className="nav-container">
-            <h1 className="logo">HDARPARISH</h1>
+            <a className="logo" href="/">HDARPARISH</a>
             <div className="navbar">
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/resume">Resume</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
                 <NavLink to="/submissions">Submissions</NavLink>
             </div>

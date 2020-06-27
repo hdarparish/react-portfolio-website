@@ -1,13 +1,25 @@
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import { Form, FormGroup, Col, Input, Label, Button, Container, CardBody, Card, CardText } from 'reactstrap'
+import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
+
+
+const useStyles = makeStyles((theme) => ({
+   root: {
+      '& > *': {
+         margin: theme.spacing(1),
+         width: '25ch'
+      },
+   },
+}));
 
 const Contact = () => {
    const [name, setName] = useState("")
    const [email, setEmail] = useState("")
    const [phoneNumber, setPhoneNumber] = useState("")
    const [content, setContent] = useState("")
+
 
    const formSubmit = async event => {
       event.preventDefault()
@@ -26,42 +38,37 @@ const Contact = () => {
          alert(`Congrats! Submission submitted with id: ${payload.id}`)
       }
    }
+   const classes = useStyles();
    return (
       <div>
-         <h1>Contact US</h1>
-         <p>Contact US page body content</p>
-         <Form className="my-5" onSubmit={formSubmit}>
-                <FormGroup row>
-                    <Label for="emailEntry" sm={2}>Email</Label>
-                    <Col sm={10}>
-                    <Input type="email" name="email" id="emailEntry" placeholder="Enter email to contact"  required value={email} onChange={e => setEmail(e.target.value) }/>
-                    </Col>
-                </FormGroup>
-                <FormGroup row>
-                    <Label for="phoneEntry" sm={2}>Phone Number</Label>
-                    <Col sm={10}>
-                    <Input type="phone" name="phone" id="phoneEntry" placeholder="Enter phone number" value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}/>
-                    </Col>
-                </FormGroup>
-                <FormGroup row>
-                    <Label for="nameEntry" sm={2}>Full Name</Label>
-                    <Col sm={10}>
-                    <Input type="name" name="name" id="nameEntry" placeholder="Enter your full name" required value={name} onChange={e => setName(e.target.value)}/>
-                    </Col>
-                </FormGroup>
+         <Container>
+            <h1>Contact US</h1>
+            <p>Contact US page body content</p>
 
-                <FormGroup row>
-                    <Label for="messageEntry" sm={2}>Message</Label>
-                    <Col sm={10}>
-                    <Input type="textarea" name="text" id="messageEntry" required value={content} onChange={e => setContent(e.target.value)}/>
-                    </Col>
-                </FormGroup>
-                <FormGroup check row>
-                    <Col sm={{ size: 10, offset: 2 }}>
-                    <Button color="success">Submit</Button>
-                    </Col>
-                </FormGroup>
-            </Form>
+            <form className={classes.root} autoComplete="off" onSubmit={formSubmit}>
+               <div className="input-style">
+                  <TextField id="emailEntry" className="input-style" label="Email" color="secondary" required value={email} onChange={e => setEmail(e.target.value)} />
+               </div>
+
+               <div className="input-style">
+                  <TextField id="phoneEntry" type="phone" className="input-style" label="Phone Number" color="secondary" required value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)} />
+               </div>
+
+               <div className="input-style">
+                  <TextField id="nameEntry" type="name" className="input-style" label="Full Name" color="secondary" required value={name} onChange={e => setName(e.target.value)} />
+               </div>
+
+               <div className="input-style">
+                  <TextField id="messageEntry" type="textarea" className="input-style" label="Message" color="secondary" required value={content} onChange={e => setContent(e.target.value)} />
+               </div>
+
+               <div>
+                  <Button className={classes.button} variant="contained" color="default" type="submit">Submit</Button>
+               </div>
+
+
+            </form>
+         </Container>
       </div>
    );
 }
