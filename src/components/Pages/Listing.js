@@ -24,7 +24,7 @@ const useStyles = makeStyles({
 const Listings = () => {
     let history = useHistory();
     const token = sessionStorage.getItem('token')
-    const user = parseJwt(token).username
+    const user = parseJwt(token).id
     const [listing, setListing] = useState([])
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -34,7 +34,7 @@ const Listings = () => {
         sessionStorage.removeItem('token')
         history.push("/login")
     }
-    const postUser = async event => {
+    const postUser = async () => {
         const response = await fetch('http://localhost:4000/users', {
             method: 'POST',
             headers: {
@@ -67,7 +67,7 @@ const Listings = () => {
     const classes = useStyles();
     return (
         <Container>
-            <h1>Listings for user: {user}</h1>
+            <h2>Listings for user: {user}</h2>
 
             <TableContainer component={Paper}>
 
@@ -102,6 +102,7 @@ const Listings = () => {
             <TableRow className="my-5">
                 <Button onClick={logout} variant="contained">Logout</Button>
             </TableRow>
+
             <form className={classes.root} autoComplete="off" onSubmit={postUser}>
                 <div className="input-style">
                     <TextField id="nameEntry" className="input-style" label="Name" color="secondary" required value={name} onChange={e => setName(e.target.value)} />

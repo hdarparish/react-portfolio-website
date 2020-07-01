@@ -1,13 +1,15 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
+import headshot from '../../assets/img_avatar3.png'
 
 const home = () => {
 
     return (
         <div>
             <Container >
-                <div className="center">
+                <div >
                     <h2 className="home">Who Am I?</h2>
+                    <div className="center">
                     <p className="about">
                         Here is some Lorem ipsum to help fill in the gap.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -22,6 +24,9 @@ const home = () => {
                         tincidunt dui ut ornare lectus. Volutpat odio facilisis mauris sit amet. Ullamcorper morbi tincidunt
                         ornare massa eget egestas purus viverra.
                     </p>
+                    <img src={headshot} alt="Avatar"></img>
+                    </div>
+
                 </div>
 
             </Container>
