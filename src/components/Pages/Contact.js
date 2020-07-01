@@ -42,7 +42,7 @@ const Contact = () => {
    return (
       <div>
          <Container>
-            <h1>Contact US</h1>
+            <h2>Contact US</h2>
             <p>Contact US page body content</p>
 
             <form className={classes.root} autoComplete="off" onSubmit={formSubmit}>

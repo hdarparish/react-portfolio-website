@@ -68,5 +68,19 @@ h1{
   width: 80% !important;
 }
 
-.center{
+h2{
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.about{
+  width: 60%;
+  justify-content: center;
+  text-align: justify;
+}
+p{
+  margin: 5px;
+}
+.resume-style{ 
+   margin-left: 10px;
+   padding-left: 10px;
 }
