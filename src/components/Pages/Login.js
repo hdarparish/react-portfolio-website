@@ -48,7 +48,7 @@ const Login = () => {
   const classes = useStyles();
   return (
     <Container>
-      <h1>Login</h1>
+      <h2>Login</h2>
       {!auth &&
         <Card className="text-white bg-primary my-5 py-4 text-center">
           <CardBody>
