@@ -64,8 +64,14 @@ h1{
 }
 
 .input-style{
-  color: bisque !important;
   width: 80% !important;
+}
+
+input{
+  color: bisque !important;
+}
+.input-style label{
+  color: white;
 }
 
 h2{
