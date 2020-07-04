@@ -82,6 +82,9 @@ h2{
   margin-top: 100px;
   margin-bottom: 10px;
 }
+h3{
+  margin-top: 50px;
+}
 .about{
   width: 60%;
   justify-content: center;
@@ -108,11 +111,26 @@ p{
   box-shadow: 0 4px 8px 0 rgb(255, 239, 239);
   transition: 0.3s;
   width: 40%;
+  display: inline-block;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgb(241, 186, 186);
 }
-
+.card h2{
+  overflow: visible;
+}
+.card a{
+  margin: 10px 10px;
+  padding: 10px;
+}
+.card a:hover{
+  color: black;
+  box-shadow: 0 8px 8px 0 rgb(114, 83, 83);
+  margin: 10px 10px;
+}
+.card a:visited, .card a:link{
+  text-decoration: none;
+}
 .center{
   display: inline-flex;
   width: 80%;
