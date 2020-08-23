@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import headshot from '../../assets/img_avatar3.png'
+import headshot from '../../assets/me.jpg'
 
 const home = () => {
 
